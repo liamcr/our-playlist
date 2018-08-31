@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Playlist - Add Songs</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Our Playlist - Collaborative Playlist Maker">
+        <meta name="keywords" content="Spotify, Playlist, Collaborative, Music, Songs">
+        <meta name="author" content="William Crocket">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    
+    <body>
+        <header>
+            <i id="back" class="back fas fa-arrow-left"></i>
+            <h1>Add Songs</h1>
+        </header>
+        
+        <main>
+            <h3>Search for a Song!</h3>
+            <h2 id="room-number"></h2>
+            
+            <input id="song-name" type="text" placeholder="Search"><br>
+            
+            <button id="submit">Search</button>
+
+            <h6 id="song-limit"></h6>
+
+            <button id="view">View Playlist</button>
+        </main>
+        
+        <!-- results is populated with the results of a search within the JavaScript -->
+        <div id="results">
+            
+        </div>
+
+        <p id="error"></p>
+        
+        <div id="added">
+            Song Added!
+        </div>
+        <div id="duplicate">
+            Song Not Added - Already In Playlist
+        </div>
+        <div id="over-limit">
+            Song Not Added - Song Limit Reached
+        </div>
+        <div id="explicit">
+            Song Not Added - No Explicit Content
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/addSongs.js"></script>
+    </body>
+</html>

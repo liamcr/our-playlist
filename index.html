@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Playlist</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Our Playlist - Collaborative Playlist Maker">
+        <meta name="keywords" content="Spotify, Playlist, Collaborative, Music, Songs">
+        <meta name="author" content="William Crocket">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    
+    <body>
+        <header>
+            <i id="logo" class="fas fa-music"></i>
+            <div class="title-and-sub">
+                <h1>Our Playlist</h1>
+                <h2>A Collaborative Playlist Maker</h2>
+            </div>
+            <i id="new-room" class="nav-button fas fa-plus"></i>
+        </header>
+
+        <main>
+            <h3>Enter a Room Number to Contribute to a Playlist!</h3>
+            <input id="room-id" maxlength="4" type="text" placeholder="Room Number"><br>
+            <button id="join-room">Submit</button>
+            <h6>Or Create your own Collaborative Playlist with the "+" Icon above!</h6>
+        
+            <!-- error-text displays an error if the inputted room does not exist -->
+            <div id="snackbar">
+                Could not find room
+            </div>
+        </main>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/index.js"></script>
+    </body>
+</html>
