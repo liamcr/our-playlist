@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Our Playlist - New Playlist</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Our Playlist - Collaborative Playlist Maker">
+        <meta name="keywords" content="Spotify, Playlist, Collaborative, Music, Songs">
+        <meta name="author" content="William Crocket">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" type="text/css" href="css/styles.css">
+    </head>
+    
+    <body>
+        <header>
+            <i id="back" class="back fas fa-arrow-left"></i>
+            <h1>New Playlist</h1>
+        </header>
+        
+        <main>
+            <h3>Create your New Playlist</h3>
+            <input id="name" type="text" placeholder="Playlist Name"><br>
+            <input id="description" type="text" placeholder="Playlist Description"><br>
+
+            <h6>Or, Select a Current Playlist</h6>
+            <select id="playlists">
+
+            </select>
+
+            <div id="options">
+                <h5>Allow Repeats?</h5>
+                <select id="repeats">
+                    <option value="N">No</option>
+                    <option value="Y">Yes</option>
+                </select><br>
+                <h5>Allow Explicit Songs?</h5>
+                <select id="explicit-option">
+                    <option value="Y">Yes</option>
+                    <option value="N">No</option>
+                </select><br>
+                <h5>Limit of Songs Added?</h5>
+                <input id="song-limit" type="number" value="3" min="0" max="100"><br>
+            </div>
+        
+            <button id="create-playlist">Create Playlist</button>
+            
+            <div id="snackbar">
+                Loading...
+            </div>
+        </main>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="scripts/newPlaylist.js"></script>
+    </body>
+</html>
