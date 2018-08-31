@@ -1,0 +1,347 @@
+html {
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: rgb(65, 65, 65);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* HEADER */
+header {
+    background: #1DB954;
+    color: whitesmoke;
+    height: 64px;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    position: fixed;
+    z-index: 3;
+}
+
+i+h1 {
+    font-size: 2.5rem;
+    margin: 12px 64px;
+}
+
+.back {
+    position: absolute;
+    left: 0;
+    line-height: 40px;
+    margin: 12px;
+    font-size: 2.5rem;
+    transition: font-size 0.1s, margin-left 0.1s;
+    cursor: pointer;
+}
+
+.back:active {
+    font-size: 2rem;
+    margin-left: 16px;
+}
+
+.title-and-sub {
+    display: inline-block;
+    margin: 8px 5px;
+}
+
+.title-and-sub h1 {
+    font-size: 2rem;
+}
+
+a {
+    color: whitesmoke;
+}
+
+#logo {
+    display: inline-block;
+    font-size: 3rem;
+    margin: 8px 12px;
+}
+
+#new-room {
+    position: absolute;
+    right: 0;
+    line-height: 40px;
+    margin: 12px;
+    font-size: 2.5rem;
+    transition: font-size 0.1s, margin-right 0.1s;
+    cursor: pointer;
+}
+
+i#new-room:active {
+    font-size: 2rem;
+    margin-right: 16px;
+}
+
+/* MAIN */
+main {
+    text-align: center;
+    margin-top: 128px;
+}
+
+main h2, main h3, main h5, main h6 {
+    color: whitesmoke;
+}
+
+main h2 {
+    position: fixed;
+    font-size: 2rem;
+    top: 16px;
+    right: 16px;
+    z-index: 3;
+}
+
+main h3 {
+    font-size: 2rem;
+    line-height: 4rem;
+    margin: 0 5px;
+}
+
+main h5 {
+    display: inline-block;
+    margin: 5px;
+}
+
+main h6 {
+    font-size: 1.5rem;
+    line-height: 3rem;
+    margin: 0 5px;
+}
+
+::placeholder {
+    color: rgb(219, 219, 219);
+}
+
+input[type=text] {
+    border: none;
+    background: grey;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2.5rem;
+    margin: 5px;
+    padding: 5px;
+    border-bottom: 2px solid rgb(65, 65, 65);
+    color: whitesmoke;
+    transition: border-bottom 0.25s;
+    outline: none;
+    max-width: 400px;
+}
+
+input[type=text]:focus {
+    border-bottom: 2px solid #1DB954;
+}
+
+input[type=number] {
+    border: none;
+    background: grey;
+    text-align: center;
+    font-size: 1rem;
+    margin: 5px;
+    max-width: 84px;
+    padding: 5px;
+    display: inline-block;
+    color: whitesmoke;
+}
+
+select {
+    font-size: 1rem;
+    padding: 5px;
+    margin: 5px;
+    color: whitesmoke;
+    background: grey;
+    border: none;
+}
+
+button {
+    border: none;
+    outline: none;
+    background: #1DB954;
+    font-size: 1.5rem;
+    border-radius: 500px;
+    padding: 8px 20px;
+    color: whitesmoke;
+    margin: 5px;
+    transition-timing-function: linear;
+    transition: padding 0.1s, margin 0.1s;
+    cursor: pointer;
+}
+
+button:active {
+    padding: 7px 19px;
+    margin: 6px 5px;
+}
+
+/* Snackbar */
+#snackbar, #added, #duplicate, #over-limit, #explicit {
+    visibility: hidden;
+    min-width: 250px;
+    margin-left: -125px;
+    background-color: #1DB954;
+    color: whitesmoke;
+    text-align: center;
+    border-radius: 2px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1;
+    left: 50%;
+    bottom: 30px;
+}
+
+#snackbar.show, #added.show, #duplicate.show, #over-limit.show, #explicit.show {
+    visibility: visible;
+    -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+    animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+#playlists {
+    font-size: 1.5rem;
+}
+
+#results {
+    margin-bottom: 100px;
+}
+
+#view {
+    position: fixed;
+    right: 40px;
+    bottom: 40px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+    from {bottom: 0; opacity: 0;} 
+    to {bottom: 30px; opacity: 1;}
+}
+
+@keyframes fadein {
+    from {bottom: 0; opacity: 0;}
+    to {bottom: 30px; opacity: 1;}
+}
+
+@-webkit-keyframes fadeout {
+    from {bottom: 30px; opacity: 1;} 
+    to {bottom: 0; opacity: 0;}
+}
+
+@keyframes fadeout {
+    from {bottom: 30px; opacity: 1;}
+    to {bottom: 0; opacity: 0;}
+}
+
+.song-data {
+    position: relative;
+    max-width: 500px;
+    background: grey;
+    margin: 15px auto;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.song-data h3 {
+    padding: 5px;
+    font-size: 1.5rem;
+    color: whitesmoke;
+}
+
+.song-data h4 {
+    padding: 10px;
+    font-size: 1.25rem;
+    color: whitesmoke;
+}
+
+.song-data h5 {
+    font-style: italic;
+    color: whitesmoke;
+    padding: 10px;
+}
+
+img {
+    float: left;
+    margin: 5px 10px 5px 5px;
+}
+
+/* On mouse-over, add a deeper shadow */
+.song-data:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.5);
+}
+
+.song-data button {
+    position: absolute;
+    background: grey;
+    border: none;
+    border-radius: 0;
+    color: #1DB954;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 5px;
+    right: 0;
+    bottom: 0;
+}
+
+.song-data p {
+    position: absolute;
+    color: rgb(219, 219, 219);
+    padding: 5px;
+    right: 0;
+    top: 0;
+    font-size: 1.25rem;
+    font-style: italic;
+}
+
+#error {
+    color: #1DB954;
+    font-style: italic;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and  (max-width: 700px) {
+    main h3 {
+        font-size: 1.5rem;
+        line-height: 2rem;
+    }
+    main h6 {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+}
+
+@media only screen and  (max-width: 600px) {
+    i+h1 {
+        display: none;
+    }
+    input[type="text"] {
+        max-width: 300px;
+    }
+    .song-data h3 {
+        font-size: 1rem;
+        padding-top: 15px;
+    }
+    .song-data h4 {
+        font-size: 0.75rem;
+    }
+    .song-data h5 {
+        font-size: 0.75rem;
+        padding-bottom: 20px; 
+    }
+}
+
+@media only screen and  (max-width: 360px) {
+    main h2 {
+        font-size: 1.5rem;
+        top: 20px;
+    }
+    header h2 {
+        font-size: 0.75rem;
+    }
+}
