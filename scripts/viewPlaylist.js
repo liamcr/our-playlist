@@ -113,7 +113,7 @@
     }
 
     document.getElementById("back").addEventListener("click", function () {
-        window.location.href = "https://ourplaylist.000webhostapp.com/addSongs.html#" + roomID;
+        window.location.href = "https://partymix.000webhostapp.com/addSongs.html#" + roomID;
     });
 
     document.addEventListener("DOMContentLoaded", function () {
@@ -130,7 +130,7 @@
                     console.log("Room Number Valid");
                 } else {
                     console.log("ERR");
-                    window.location.href = "https://ourplaylist.000webhostapp.com/roomNotFound.html";
+                    window.location.href = "https://partymix.000webhostapp.com/roomNotFound.html";
                 }
             },
             error: function (data) {
