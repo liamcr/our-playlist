@@ -203,11 +203,11 @@
     }
 
     document.getElementById("back").addEventListener("click", function () {
-        window.location.href = "https://ourplaylist.000webhostapp.com";
+        window.location.href = "https://partymix.000webhostapp.com";
     });
 
     document.getElementById("view").addEventListener("click", function () {
-        window.location.href = "https://ourplaylist.000webhostapp.com/viewPlaylist.html#" + roomID;
+        window.location.href = "https://partymix.000webhostapp.com/viewPlaylist.html#" + roomID;
     });
 
     /*
@@ -229,7 +229,7 @@
                         console.log("Room Number Valid");
                     } else {
                         console.log("ERR");
-                        window.location.href = "https://ourplaylist.000webhostapp.com/roomNotFound.html";
+                        window.location.href = "https://partymix.000webhostapp.com/roomNotFound.html";
                     }
                 },
                 error: function (data) {
