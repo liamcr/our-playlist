@@ -1,4 +1,4 @@
-# our-playlist
-The source code to my first project: Our Playlist
+# Party Mix
+The source code to my first project: Party Mix
 
-You can see the project at https://ourplaylist.000webhostapp.com
+You can see the project at https://partymix.000webhostapp.com
