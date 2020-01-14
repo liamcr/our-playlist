@@ -143,7 +143,7 @@
     });
 
     document.getElementById("back").addEventListener("click", function() {
-        window.location.href = "https://ourplaylist.000webhostapp.com";
+        window.location.href = "https://partymix.000webhostapp.com";
     });
 
     document.getElementById("playlists").addEventListener("change", function() {
@@ -199,7 +199,7 @@
                         console.log(data);
                     });
         
-            window.location.href = "https://ourplaylist.000webhostapp.com/addSongs.html#"
+            window.location.href = "https://partymix.000webhostapp.com/addSongs.html#"
                 + encodeURIComponent(roomNum);
         }, 2000);
     });

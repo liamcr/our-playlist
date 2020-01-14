@@ -2,7 +2,7 @@
 "use strict";
 
     const clientID = "c3f3e29b9d174e9998b082e0c9573fd6";
-    var redirectURI = "https://ourplaylist.000webhostapp.com/newPlaylist.html";
+    var redirectURI = "https://partymix.000webhostapp.com/newPlaylist.html";
     var scopes = ["playlist-read-private", "playlist-read-collaborative", "playlist-modify-private", "playlist-modify-public"]
 
     var userURL = "https://accounts.spotify.com/authorize?client_id=" + clientID +
@@ -49,7 +49,7 @@
             data: {'roomID': roomID},
             success: function(data) {
                 if (data === "Success") {
-                    window.location.href = "https://ourplaylist.000webhostapp.com/addSongs.html#"
+                    window.location.href = "https://partymix.000webhostapp.com/addSongs.html#"
                         + encodeURIComponent(roomID);
                 } else {
                     snackbarFunction();
